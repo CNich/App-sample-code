@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Your site description." />
+
+    <link href="responsive.min.css" rel="stylesheet" />
+	
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Your site description." />
+    <title>App Overview</title>
+
+	
+	<!-- it works the same with all jquery version from 1.x to 2.x -->
+    <!-- use jssor.slider.mini.js (40KB) instead for release -->
+    <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+	<script src="vendor/jquery-2.1.3.min.js"></script>
+    <script src="responsive.min.js"></script>
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 1200, $Opacity: 2 }
+            ];
+
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 0, 					                //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+
+                $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 10,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 10,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                },
+
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $Steps: 1                                       //[Optional] Steps to go for each navigation request, default value is 1
+                }
+            };
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$ScaleWidth(Math.min(parentWidth, 350));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+	
+</head>
+<body>
+<main role="main">
+    <div class="container">
+        <div class="row">
+    <div class="col-m-9">
+        <hr />
+        <section id="whatIsThisApp">
+            <h1>What is this app?</h1>
+			<h3>Click <a href="http://yatchium.com/lwi2" style="text-decoration: none; color:#0000FF;"><b>here</b></a> for a link to the app, but it is highly recommended that you 
+			at least skim this page before going!!!</h3>
+            	<p>
+				In a sentence, this app helps you see which of your facebook friends are nearby. 
+				It doesn't just show all of your 5,203,014 facebook friends where you are at any given moment though; they have to have the app as well :) <br><br>
+				You are probably asking, what if I don't want some of them to know where I am? Well, we figured that out. It takes a few clicks, but with this app, you decide who gets to see you. 
+				You can think of a reverse twitter type relationship, where instead of deciding who to follow, you decide on who gets to follow you.<br><br>
+				Now, what if there is someone who you want to avoid, but they want to show you where they? Well lucky for you, you get the ultimate avoidance tool! <br><br>
+				What if the reverse is true? Well... you will never really know that they are avoiding you in the first place (unless your friend happens to mention they saw the person in question in their profile). <br><br>
+				Yes, you can turn off tracking any time you want, so only when you want people to know where you are is when you would turn it on. Probably when you are going out on a weekend or
+				going to a busy event where you know there could be people you would like to run into.<br><br>
+				Well, lets see how it works.
+				</p>
+
+        </section>
+		
+        <hr />
+		
+		<section id="LoggingInWithFacebook">
+            <h2>A quick note</h2>
+            <p>
+                The app more or less is working, but has so far only been tested on chrome and firefox. Also, going on incognito mode may make the experience better as there are some slight caching issues.
+            </p>
+        </section>
+		
+		<hr />
+		
+        <section id="LoggingInWithFacebook">
+            <h1>Logging in as a Tester</h1>
+            <p>
+                No passwords are needed for this app, it simply connects to your facebook account. <b>What we keep are your list of friends that have the app/who you try to follow/allow to follow, 
+				and your most recently loaded location</b>.
+				None of this stuff is being read by us (by the time we roll out) or sold in any way. If it is, we'll tell you.<br><br>
+				To log in, just click "log in with facebook" which will redirect you to facebook's website/app (depending on if you are using the app or website), and read over the terms and if you accept, you will be redirected to the homepage.<br><br>
+				
+            </p>
+        </section>
+		
+		<hr />
+		
+		<section id="LoggingInWithTemp">
+            <h1>Logging in as an innocent bystander</h1>
+            <p>
+                This is for people who are just checking the site out that are not official testers and thus, can't log in with facebook even if they wanted :P <br><br>
+				To log in, just click "Temp Login" which will redirect you to the homepage. You will be given a fake profile with some fake friends just to get a sense of what this app is about, and get to play around with it. <br><br>				
+            </p>
+        </section>
+		
+        <hr />
+		
+		<section id="theHomePage">
+            <h1>The Home Page</h1>
+            <div style="max-width:350px"> <img align="middle" src="images/homepage.png"> </div>
+			<p>
+			This is the homepage. It's just a map with some buttons along the top and bottom, and we are logged in as the temporary user. The temp user is the one with the purple box in the map 
+			(You can verify this by looking at the top right for the same icon). What is currently happening is that of the people who are showing us their location, we are mutually showing
+			the guinea pig out location (outlined in green), and hiding our location from the guy (outlined in grey, and faded a little). This is more or less the whole point of the app. But 
+			what about all those other buttons? They are detailed later on. If you are in a hurry, check out the 
+			<a href="#Gallery" style="text-decoration: none; color:#330066; background-color:#e6e6e6;"><b>slideshow</b></a> of various pages in the app.
+			</p>
+        </section>
+	
+		<hr />
+		
+		<section id="WhoSeesWho">
+		<h1>Who Sees Who?</h1>
+		<p>
+		To control you who want to show your location to, go to <b>options &#9658 Show Groups</b>. From there, you can make a 
+		new group, or edit an existing one by clicking the corresponding group name, and modify each member by toggling 
+		their status in that group by clicking their name. The same is true for your view groups as well (people who 
+		you want to see). See the image below of an edit group page. <b>Remember to submit your changes</b>! The button is at 
+		the bottom of the page.
+		<p>
+		<div style="max-width:350px"> <img align="middle" src="images/edit group.png"> </div>
+		</section>
+		
+		<hr />
+		
+		<section id="Gallery">
+            <h1>Some More App Screenshots</h1>
+			<p>Now for some more app screen shots... Taken from my galaxy nexus i9250 (it's from 2011 and can still run this sweet app nicely).</p>
+        <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 350px; height: 623px; overflow: hidden; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 350px; height: 623px; overflow: hidden;">
+            <div><img u="image" src="images/homepage.png" /></div>
+            <div><img u="image" src="images/homepage_Annotated.png" /></div>
+            <div><img u="image" src="images/options.png" /></div>
+            <div><img u="image" src="images/show groups.png" /></div>
+            <div><img u="image" src="images/statuses.png" /></div>
+            <div><img u="image" src="images/Everybody.png" /></div>
+            <div><img u="image" src="images/edit group.png" /></div>
+            <div><img u="image" src="images/edit group 2.png" /></div>
+			<div><img u="image" src="images/crop.png" /></div>
+        </div>
+
+        <!-- Bullet Navigator Skin Begin -->
+        <style>
+            /* jssor slider bullet navigator skin 05 css */
+            /*
+            .jssorb05 div           (normal)
+            .jssorb05 div:hover     (normal mouseover)
+            .jssorb05 .av           (active)
+            .jssorb05 .av:hover     (active mouseover)
+            .jssorb05 .dn           (mousedown)
+            */
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                background: url(../img/b05.png) no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .jssorb05 div {
+                background-position: -7px -7px;
+            }
+
+                .jssorb05 div:hover, .jssorb05 .av:hover {
+                    background-position: -37px -7px;
+                }
+
+            .jssorb05 .av {
+                background-position: -67px -7px;
+            }
+
+            .jssorb05 .dn, .jssorb05 .dn:hover {
+                background-position: -97px -7px;
+            }
+        </style>
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb05" style="position: absolute; bottom: 0px; right: 6px;">
+            <!-- bullet navigator item prototype -->
+            <div u="prototype" style="POSITION: absolute; WIDTH: 16px; HEIGHT: 16px;"></div>
+        </div>
+        <!-- Bullet Navigator Skin End -->
+        <!-- Arrow Navigator Skin Begin -->
+        <style>
+            /* jssor slider arrow navigator skin 12 css */
+            /*
+            .jssora12l              (normal)
+            .jssora12r              (normal)
+            .jssora12l:hover        (normal mouseover)
+            .jssora12r:hover        (normal mouseover)
+            .jssora12ldn            (mousedown)
+            .jssora12rdn            (mousedown)
+            */
+            .jssora12l, .jssora12r, .jssora12ldn, .jssora12rdn {
+                position: absolute;
+                cursor: pointer;
+                display: block;
+                background: url(../img/a10.png) no-repeat;
+                overflow: hidden;
+            }
+        
+            .jssora12l {
+                background-position: -16px -37px;
+            }
+        
+            .jssora12r {
+                background-position: -75px -37px;
+            }
+        
+            .jssora12l:hover {
+                background-position: -136px -37px;
+            }
+        
+            .jssora12r:hover {
+                background-position: -195px -37px;
+            }
+        
+            .jssora12ldn {
+                background-position: -256px -37px;
+            }
+        
+            .jssora12rdn {
+                background-position: -315px -37px;
+            }
+        </style>
+        <!-- Arrow Left -->
+        <span u="arrowleft" class="jssora12l" style="width: 30px; height: 46px; top: 50%; left: 0px;">
+        </span>
+        <!-- Arrow Right -->
+        <span u="arrowright" class="jssora12r" style="width: 30px; height: 46px; top: 50%; right: 0px">
+        </span>
+		
+        <!-- Arrow Navigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">jQuery Carousel</a>
+    </div>
+    <!-- Jssor Slider End -->
+	</section>
+		
+		<hr />
+		
+		<section id="Conclusion">
+		<h1>Conclusion</h1>
+		<p>
+		Well, there you have it, an overview of the app. If you want to test it out, click <a href="http://yatchium.com/lwi2" 
+		style="text-decoration: none; color:#330066; background-color:#e6e6e6;"><b>here</b></a>. 
+		This is a work in progress, so you will see some bugs here and there, but they are being ironed out as you read this! Also, you may be 
+		wondering how this is an app when it is a website. Well, we are using <a href="http://phonegap.com/">Phonegap</a> to make this an actual 
+		android/iOS app, which is not yet ready for you to try yet :S<br><br>
+		If you have any questions, let us know (if you are here, then you already know our emails). We'll post them for the public in the near future).
+		<p>
+		</section>
+</body>
+</html>

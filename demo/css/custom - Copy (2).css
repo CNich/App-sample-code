@@ -1,0 +1,168 @@
+.selectedPerson {
+    background-color:#99FFCC!important;
+    color:#000828!important;
+}
+
+.unselectedPerson {
+    background-color:#FFCCCC!important;
+    color:#000828!important;
+}
+
+.deleteRed{
+	background-color:#FF0000!important;
+}
+
+.ui-page-theme-a .ui-header.ui-bar-inherit {
+    background-color:#66b2ff;
+}
+
+li:odd>a #optionsList{
+	background-color:#0000FF!important;
+}
+
+div > a > h1 {
+	color:white!important;
+}
+
+.ui-title {
+	color:#FFFFFF;
+	text-shadow:none!important;
+}
+
+body .ui-body-a, body .ui-overlay-a
+{
+text-shadow:0 0 0!important;
+}
+
+.facebookBlue{
+	background-color:#3B5998!important;
+	color:white!important;
+}
+
+h2,h3{
+	text-shadow:none!important
+}
+
+.map {
+	height: calc(100% - 110px)!important;
+}
+
+
+.homePage{
+	position:absolute!important;
+	margin-top:0px!important;
+}
+
+.statusInputType {
+	width:80%!important;
+}
+
+.statusInputGo{
+	width:20%!important;
+	height:20px!important;
+}
+
+.statusInputGoButton{
+	height:36px!important;
+}
+
+.homeOptions{
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+
+.homeOptionsButton{
+	font-size:7pt!important;
+	background-color:#66b2ff!important;
+	color:#FFFFFF!important;
+}
+
+.ui-icon-downloadArrow {
+	background: url("../images/down arrow.png") 50% 50% no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	background-color:#66b2ff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.ui-icon-downloadArrow:active  {
+	background: url("../images/down arrow P.png") 50% 50% no-repeat;
+	background-color:#0000FF!important;
+}
+
+.ui-icon-uploadArrow {
+	background: url("../images/up arrow.png") 50% 50% no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	background-color:#66b2ff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.ui-icon-uploadArrow:active {
+	background: url("../images/up arrow P.png") 50% 50% no-repeat!important;
+	background-color:#0000FF!important;
+}
+
+.ui-icon-centerCustom {
+	background: url("../images/center.png") 50% 50% no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	background-color:#66b2ff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.ui-icon-centerCustom:active {
+	background: url("../images/center P.png") 50% 50% no-repeat;
+	background-color:#0000FF!important;
+}
+
+.ui-icon-optionsCustom {
+	background: url("../images/options.png") 50% 50% no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	background-color:#66b2ff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.ui-icon-optionsCustom:active {
+	background: url("../images/options P.png") 50% 50% no-repeat!important;
+	background-color:#0000FF!important;
+}
+
+.ui-icon-friendsCustom {
+	background: url("../images/friends.png") 50% 50% no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	background-color:#66b2ff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.ui-icon-friendsCustom:active  {
+	background: url("../images/friends P.png") 50% 50% no-repeat;
+	background-color:#0000FF!important;
+}
+
+/* jssor slider bullet navigator skin 03 css */
+            /*
+            .jssorb03 div           (normal)
+            .jssorb03 div:hover     (normal mouseover)
+            .jssorb03 .av           (active)
+            .jssorb03 .av:hover     (active mouseover)
+            .jssorb03 .dn           (mousedown)
+            */
+            .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av
+            {
+                background: url(../img/b03.png) no-repeat;
+                overflow:hidden;
+                cursor: pointer;
+            }
+            .jssorb03 div { background-position: -5px -4px; }
+            .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+            .jssorb03 .av { background-position: -65px -4px; }
+            .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }

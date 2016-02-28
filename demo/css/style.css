@@ -1,0 +1,577 @@
+:root{
+	--main-deep:#330066;
+	--main-gr:#e6e6e6;
+	--main-grn:#008080;
+	
+	/*	rgba(51,0,102,0.7) */
+	/*	rgba(230,230,230,0.7) */
+}
+
+.ui-btn-center{
+	margin: 0 auto;
+}
+
+#map {
+	height: calc(100% - 94px); /*48 for perfect bottom*/ 
+	/*height: calc(100% - 48px);*/
+	/*bottom:46px;*/
+}
+
+/*header > div > div > a .ui-page-theme-a .ui-btn{*/
+header > div > div > a {
+	opacity:1!important;
+	background-color:red;
+}
+
+h3{
+	color:white;
+}
+
+.leaflet-container{
+	bottom:-46px
+}
+
+
+.ui-content {
+    position: absolute;
+    top: 8%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 !important;
+}
+
+#profilePicCanvas{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#profileViewerCanvas{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.buttonOnMap{
+	display:inline-block;
+	position:absolute;
+	bottom:70px;
+	right:10px;
+	z-index: 9999;
+}
+
+
+.sweet-deal-label {
+	background-color: #FE57A1;
+	background-color: rgba(254, 87, 161, 0.66);
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	color: #fff;
+	font-weight: bold;
+}
+
+.jc-demo-box {
+    margin: 2em auto;
+    text-align: left;
+    padding: 1em 2em 2em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*****************************************************************************/
+/* !important used because alternating listview items has a lot of specificity 
+and will be hard to override, plus this is a very specific case that
+/*****************************************************************************/
+.selectedPerson {
+    /*background-color:#110033!important;*/
+	background-color:rgba(51,0,102,0.7)!important;
+    color:#FFFFFF!important;
+	/*opacity:0.7!important;*/
+}
+
+.unselectedPerson {
+	/*background-color:#e6e6e6!important;*/
+	background-color:rgba(230,230,230,0.7)!important;
+    /*opacity: 0.5!important;*/
+    /*color:#777777!important;*/
+	color:black;
+	/*opacity:0.7!important;*/
+}
+
+.unselectedPerson > div > h3, .unselectedPerson > h2 {
+	/*background-color:rgba(230,230,230,0.7)!important;*/
+    /*opacity: 0.5!important;*/
+    /*color:#777777!important;*/
+	color:black;
+	/*opacity:0.7!important;*/
+}
+
+.ui-listview-inset > li > a.everythingOrBody.ui-btn {
+	background-color:rgba(255,255,255,0.7);
+	color:black;
+}
+
+
+.ui-listview-inset > li > a.everythingOrBody.ui-btn:hover,  a.everythingOrBody.ui-btn:active{
+	background-color:rgba(0, 128, 128,1)!important;
+	color:white!important;
+}
+
+/* CHECKBOXES ***************************/
+/****************************************/
+.ui-checkbox-on {
+	background-color:rgba(51,0,102,1)!important;
+}
+
+.ui-checkbox-off{
+	background-color:rgba(230,230,230,1)!important;
+}
+/****************************************/
+/*****************************************************************************/
+
+
+
+/********* LIST VIEW THUMBNAILS *********/
+/****************************************/
+
+.ui-listview .ui-li-has-thumb>.ui-btn>img:first-child {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0; left: 0px; top: 0; right: 0;
+	min-height: 80px;
+	min-width: 80px;
+
+}
+
+.thumbContainer {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    
+    width: 80px;
+    overflow: hidden;
+}
+
+/****************************************/
+
+
+.ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li:nth-child(even) > a.ui-btn{
+}
+
+#optionsList > a.ui-btn {
+/*background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #330066),
+	color-stop(1, #400080)
+);
+background-image: -o-linear-gradient(bottom, #330066 0%, #400080 100%);
+background-image: -moz-linear-gradient(bottom, #330066 0%, #400080 100%);
+background-image: -webkit-linear-gradient(bottom, #330066 0%, #400080 100%);
+background-image: -ms-linear-gradient(bottom, #330066 0%, #400080 100%);
+background-image: linear-gradient(to bottom, #330066 0%, #400080 100%);
+*/
+
+background-color:white;
+color:black;
+opacity: 0.7;
+}
+
+#optionsList > a:hover, a:active {
+	background-image:none;
+	background-color: #008080;
+}
+
+element.style {
+	padding-left: 0px;
+}
+
+.deleteRed{
+	background-color:#700!important;
+}
+
+.ui-page-theme-a .ui-header.ui-bar-inherit {
+    background-color:#330066;
+}
+
+div > a > h1 {
+	color:white!important;
+}
+
+.ui-title {
+	color:#FFFFFF;
+	text-shadow:none!important;
+}
+
+body .ui-body-a, body .ui-overlay-a
+{
+text-shadow:0 0 0!important;
+}
+
+.facebookBlue{
+	background-color:#3B5998!important;
+	color:white!important;
+}
+
+h2,h3{
+	text-shadow:none!important
+}
+
+.homePage{
+	position:absolute!important;
+	margin-top:0px!important;
+}
+
+/********************************************************/
+/********************* status input *********************/
+/********************************************************/
+.statusUpdate{
+	position: absolute;
+	z-index:9999;
+	width:100%;
+	top:-25px;
+}
+
+.statusInputType {
+	width:80%!important;
+}
+
+.statusInputGo{
+	width:20%!important;
+	height:100%!important;
+}
+
+.statusInputGo > div{
+	padding: 9px;
+}
+
+.statusInputGoButton{
+	height:100%!important;
+}
+/********************************************************/
+
+.homePageUserIcon{
+	background: url("http://yatchium.com/lwi2/php/new/imageRetriever.php?userID=100000000") 50% 50% no-repeat;
+	background-size: 34px 34px;
+	height:34px;
+	width:34px;
+	padding: 0px;
+	/*border:1px solid white;*/
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+
+.homeOptions{
+	position:absolute;
+	bottom:0;
+	height:54px;
+	width:100%;
+	opacity:1;
+}
+
+.homeOptionsButton {
+	font-size:7pt!important;
+	opacity:1;
+}
+
+.ui-page-theme-a .ui-btn .homeOptionsButton{
+	opacity:1;
+}
+
+.ui-icon-downloadArrow {
+	background: url("../images/down arrow.png") 50% 50% no-repeat;
+	background-size: 38px 38px;
+	width: 38px;
+	height:54px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+	opacity:1;
+}
+
+.ui-icon-downloadArrow:active  {
+	background-color:#0000FF!important;
+}
+
+.ui-icon-uploadArrow {
+	background: url("../images/up arrow.png") 50% 50% no-repeat;
+	background-size: 38px 38px;
+	width: 38px;
+	height:54px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+	opacity:1;
+}
+
+.ui-icon-uploadArrow:active {
+	background-color:#0000FF!important;
+}
+
+.ui-icon-centerCustom {
+	background: url("../images/center.png") 50% 50% no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	height:54px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+	opacity:1;
+}
+
+.ui-icon-centerCustom:active {
+	background-color:#0000FF!important;
+}
+
+.ui-icon-optionsCustom {
+	background: url("../images/options.png") 50% 50% no-repeat;
+	background-size: 32px 32px;
+	width: 32px;
+	height:54px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+	opacity:1;
+}
+
+.ui-icon-optionsCustom:active {
+	background-color:#0000FF!important;
+}
+
+.ui-icon-friendsCustom {
+	background: url("../images/friends.png") 50% 50% no-repeat;
+	background-size: 38px 38px;
+	width: 32px;
+	height:54px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+	opacity:1;
+}
+
+.ui-icon-friendsCustom:active  {
+	background-color:#0000FF!important;
+}
+
+.mainlyEmpty{
+	/*background: #466368;
+	background: -webkit-linear-gradient(#e6e6e6, #848484);
+	background:    -moz-linear-gradient(#e6e6e6, #848484);
+	background:         linear-gradient(#e6e6e6, #848484);
+	*/
+	background: url("../images/hot-air-balloons-islands_00443417 - Copy.jpg") 50% 50% no-repeat;
+	background-size: 100% 100%;
+	/*opacity:0.5;*/
+}
+
+/* jssor slider bullet navigator skin 03 css */
+            /*
+            .jssorb03 div           (normal)
+            .jssorb03 div:hover     (normal mouseover)
+            .jssorb03 .av           (active)
+            .jssorb03 .av:hover     (active mouseover)
+            .jssorb03 .dn           (mousedown)
+            */
+            .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av
+            {
+                background: url(../img/b03.png) no-repeat;
+                overflow:hidden;
+                cursor: pointer;
+            }
+            .jssorb03 div { background-position: -5px -4px; }
+            .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px; }
+            .jssorb03 .av { background-position: -65px -4px; }
+            .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px; }
+
+.ui-shadow,
+.ui-btn-up-a,
+.ui-btn-hover-a,
+.ui-btn-down-a,
+.ui-body-b,
+.ui-btn-up-b,
+.ui-btn-hover-b,
+.ui-btn-down-b,
+.ui-bar-c,
+.ui-body-c,
+.ui-btn-up-c,
+.ui-btn-hover-c,
+.ui-btn-down-c,
+.ui-bar-c,
+.ui-body-d,
+.ui-btn-up-d,
+.ui-btn-hover-d,
+.ui-btn-down-d,
+.ui-bar-d,
+.ui-body-e,
+.ui-btn-up-e,
+.ui-btn-hover-e,
+.ui-btn-down-e,
+.ui-bar-e,
+.ui-body-f,
+.ui-btn-up-f,
+.ui-btn-hover-f,
+.ui-btn-down-f,
+.ui-bar-f,
+.ui-body-g,
+.ui-btn-up-g,
+.ui-btn-hover-g,
+.ui-btn-down-g,
+.ui-bar-g,
+.ui-overlay-shadow,
+.ui-shadow,
+.ui-btn-active,
+.ui-body-a,
+.ui-bar-a {
+	text-shadow: none!important;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+/*Default button and list colors */
+/*.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited{*/
+html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited{
+	/*background-color:#DAB9B9;*/
+	background-color:#330066;
+	border-color:#ddd;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*Background Color */
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+	/*background-color: #e6e6e6;*/
+	background: url("../images/hot-air-balloons-islands_00443417.jpg") 50% 50% no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-position: center; 
+	border-color: #bbb;
+	color: #333;
+	text-shadow: 0 1px 0 #f3f3f3;
+}
+
+.ui-page-theme-a .ui-btn{
+	border-color:#ddd;
+	background-color:#330066;
+	color:#FFF;
+	/*background-color:white;
+	/*color:black;
+	/**/
+	text-shadow:none;
+	/*opacity:0.7;*/
+}
+
+/*.ui-page, .ui-page-theme-a, .ui-page-active{
+/*	/*background-color: #e6e6e6;*/
+/*	background: url("../images/hot-air-balloons-islands_00443417 - Copy.jpg") 50% 50% no-repeat;
+/*	background-size: 100% 100%;
+/*	border-color: #bbb;
+/*	color: #333;
+/*	text-shadow: 0 1px 0 #f3f3f3;
+/*}*/
+
+/*Slider Color */
+.ui-page-theme-a .ui-slider-track .ui-btn-active{
+	background-color:#330066;
+}
+
+/* Search input Ending part (connected to above) */
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{
+	padding-left: 3.75em;
+	/*background-color: wheat; */
+	background-color:CCB1B1;
+}
+
+.ui-shadow-inset{
+	box-shadow: 0px 1px 3px rgba(255, 255, 255, 0) inset;
+}
+
+.ui-page-theme-a .ui-btn:focus, html .ui-bar-a .ui-btn:focus, html .ui-body-a .ui-btn:focus, html body .ui-group-theme-a .ui-btn:focus, html head + body .ui-btn.ui-btn-a:focus, .ui-page-theme-a .ui-focus, html .ui-bar-a .ui-focus, html .ui-body-a .ui-focus, html body .ui-group-theme-a .ui-focus, html head + body .ui-btn-a.ui-focus, html head + body .ui-body-a.ui-focus {
+    box-shadow: 0px 0px 12px #DEFF00;
+}
+
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    padding-left: 3.75em;
+    /*background-color: wheat; */
+	background-color:CCB1B1;
+    box-shadow: 3px 3px 3px grey;
+}
+
+/*listview*/
+.ui-listview > .ui-li-has-thumb > .ui-btn, .ui-listview > .ui-li-static.ui-li-has-thumb {
+    min-height: 3.625em;
+    padding-left: 6.25em;
+	/*background-color: wheat; */
+	background-color:CCB1B1;
+}
+
+/*Even list items */
+/*.ui-listview > .ui-li-static, .ui-listview > .ui-li-divider, .ui-listview > li:nth-child(even) > a.ui-btn{
+/*    /*border-width: 1px 0px 0px; */
+/*    border-style: solid;
+/*    background-color:#e6e6e6;
+/*	color:#777777;
+/*} 
+*/
+/* Text input css */
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    padding-left: 3.75em;
+    background-color: black;
+    box-shadow: 3px 3px 3px rgb(128, 128, 128), 3px 3px 3px rgb(128, 128, 128) inset;
+}
+
+/* Search input i.e. search for friends */
+.ui-input-search input {
+    padding-left: 1.75em;
+}
+/* Search input i.e. search for friends */
+.ui-input-text input, .ui-input-search input {
+    color: rgb(0, 0, 0);
+	text-shadow:none;
+}
+
+/* Search input i.e. search for friends */
+/*.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a { */
+.ui-body-a, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a { 
+    padding-left: 0.75em;
+    /*background-color: #98EAE1;*/
+	background-color:#e6e6e6;
+    box-shadow: 3px 3px 3px #808080, 3px 3px 3px #929AC0 inset;
+}
+
+/* Side panels for viewing and showing*/
+.ui-page-theme-a .ui-body-inherit{
+    padding-left: 0;
+    /*background-color: #e6e6e6;*/
+	background-color:rgba(230,230,230,0.7);
+    /*box-shadow: 3px 3px 3px #808080, 3px 3px 3px #929AC0 inset;*/
+}
+
+/*.ui-page-theme-a .ui-btn:hover, .ui-listview > li:nth-child(even) > a.ui-btn:hover{
+/*	background-color:#008080;
+/*	color:#fff!important;
+/*	text-shadow:none;
+/*}*/
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff!important
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff!important;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff!important;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff!important;
+}
+
+
+.jcrop-preview {
+	width: 150px;
+	height: 150px;
+	margin-left: 700px;
+	margin-top: 100px;
+}
+

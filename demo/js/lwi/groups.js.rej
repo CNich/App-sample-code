@@ -1,0 +1,16 @@
+diff a/platforms/android/assets/www/js/lwi/groups.js b/platforms/android/assets/www/js/lwi/groups.js	(rejected hunks)
+@@ -110,10 +110,10 @@
+ 		for (var j=0; j<groupData.EverybodyshowPeople.length;j++){
+ 			temp += "<li data-filtertext=\"" + friendData['names'][j] + "\">";
+ 			temp += "<a onclick=\"openProfile2("+groupData.EverybodyshowPeople[j]+")\">"
+-<<<<<<< HEAD
+-=======
+-			//temp += "<image src=\"http://yatchium.com/lwi/Site/php/new/imageRetriever.php?userID=" + groupData.EverybodyshowPeople[j] + "\">";
+->>>>>>> dbaa93ea8a533652a2d970a1f0deb76bbf41f373
++//<<<<<<< HEAD
++//=======
++//			//temp += "<image src=\"http://yatchium.com/lwi/Site/php/new/imageRetriever.php?userID=" + groupData.EverybodyshowPeople[j] + "\">";
++//>>>>>>> dbaa93ea8a533652a2d970a1f0deb76bbf41f373
+ 			temp += "<image src=\"http://yatchium.com/lwi2/php/new/imageRetriever.php?userID=" + groupData.EverybodyshowPeople[j] + "\">";
+ 			temp += "<h2>" + friendData['names'][j] + "</h2>";
+ 			temp += "<p>Will get their status</p>";
